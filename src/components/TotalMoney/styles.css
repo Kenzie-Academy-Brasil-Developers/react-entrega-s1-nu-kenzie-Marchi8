@@ -1,0 +1,81 @@
+.total-money {
+    position: absolute;
+    width: 363px;
+    height: 96px;
+    left: 258px;
+    top: 494px;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+@media(max-width:768px) {
+    .total-money {
+        width: 363px;
+        height: 96px;
+        left: 25%;
+        margin-top: 200px;
+        border: 1px solid #E9ECEF;
+        border-radius: 4px;
+    }
+}
+
+@media(max-width:425px) {
+    .total-money {
+        width: 363px;
+        height: 96px;
+        left: 7%;
+        margin-top: 225px;
+        border: 1px solid #E9ECEF;
+        border-radius: 4px;
+    }
+}
+
+.total-section {
+    position: absolute;
+    width: 138px;
+    height: 58px;
+    top: 5px;
+}
+
+.total-title {
+    position: absolute;
+    width: 84px;
+    height: 30px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+    left: 20px;
+}
+
+.total-text {
+    position: absolute;
+    width: 138px;
+    height: 22px;
+    left: 20px;
+    top: 40px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #343A40;
+}
+
+
+.total {
+    color: #FD377E;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 275px;
+    top: 20px;
+}

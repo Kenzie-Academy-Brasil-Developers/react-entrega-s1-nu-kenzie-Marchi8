@@ -1,0 +1,217 @@
+.form {
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 363px;
+    height: 351px;
+    left: 258px;
+    top: 127px;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+}
+
+@media(max-width:768px) {
+    .form {
+        position: absolute;
+        left: 200px;
+        top: 5px;
+    }
+}
+
+@media(max-width:650px) {
+    .form {
+        position: absolute;
+        left: 100px;
+        top: 0%;
+    }
+}
+
+@media(max-width:440px) {
+    .form {
+        position: absolute;
+        left: 20px;
+        top: 0px;
+    }
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    gap: 10px;
+    position: absolute;
+    width: 314px;
+    height: 48px;
+    left: 24.5px;
+    top: 265px;
+    background: #FD377E;
+    border: 2px solid #FD377E;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.label-description {
+    width: 57px;
+    height: 22px;
+    position: absolute;
+    left: 0.62%;
+    right: 81.23%;
+    top: 0%;
+    bottom: 80%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+.input-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 10px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 31%;
+    bottom: 21%;
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    height: 52.8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #868E96;
+}
+
+.form-header {
+    position: absolute;
+    width: 314px;
+    height: 110px;
+    left: 24.5px;
+    top: 38px;
+}
+
+.example {
+    position: absolute;
+    left: 0%;
+    right: 59.87%;
+    top: 83%;
+    bottom: -1.18%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #868E96;
+    width: 126px;
+    height: 20px;
+}
+
+.form-footer {
+    position: absolute;
+    width: 314px;
+    height: 79px;
+    left: 24.5px;
+    top: 167px;
+}
+
+.label-value {
+    width: 29px;
+    height: 22px;
+    position: absolute;
+    left: 0.71%;
+    right: 76.63%;
+    top: 0%;
+    bottom: 72.15%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+.input-value {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 39.24%;
+    bottom: 0%;
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    width: 128px;
+    height: 48px;
+    padding: 0px 0px 0px 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #868E96;
+}
+
+.label-selectValue {
+    width: 74px;
+    height: 22px;
+    position: absolute;
+    top: 0%;
+    bottom: 72.15%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+    margin-left: 8px;
+}
+
+.select-value {
+    width: 150px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 10px;
+    position: absolute;
+    right: 0%;
+    top: 39.24%;
+    bottom: 0%;
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #343A40;
+    cursor: pointer;
+}
+
+.reais {
+    position: absolute;
+    right: 57%;
+    top: 62%;
+    bottom: 0%;
+    cursor: text;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
