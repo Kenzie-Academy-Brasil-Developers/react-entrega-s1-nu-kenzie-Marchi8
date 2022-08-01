@@ -10,24 +10,28 @@ import LoginPng from "./images/login.png"
 import Nocard from "./images/NoCard.png"
 import R$ from "./images/value.png"
 import trash from "./images/trash.png"
+// import { Toast } from 'react-toastify/dist/components';
 
 function App() {
 
   const [login, setLogin] = useState(false)
-
   const [listTransactions, setListTransactions] = useState([])
-  // const [filteredTransactions, setFilteredTransactions] = useState(listTransactions)
-
-  const filterEntry = listTransactions.filter(entry => entry.type == "Entrada")
-  const filterExpense = listTransactions.filter(entry => entry.type == "Despesa")
+  const [filter, setFilter] = useState([])
 
   function addTransaction(valueInput, descriptionInput, selectInput) {
-    setListTransactions(
-      [...listTransactions, {
-        description: descriptionInput,
-        type: selectInput, value: valueInput
-      }]
-    )
+    if (descriptionInput === "" || valueInput === "" || selectInput === "") {
+      alert("Preencha todos os campos");
+    } else if (valueInput.includes("-")) {
+      alert("Não é possível adicionar valores negativos");
+    }
+    else {
+      setListTransactions(
+        [...listTransactions, {
+          description: descriptionInput,
+          type: selectInput, value: valueInput
+        }]
+      )
+    }
   }
 
   function handleTransaction(transaction) {
@@ -48,13 +52,15 @@ function App() {
       <>
         <div className="container">
           <div className="App-log">
-            <img src={NuKenzieLog} alt="" />
+            <div className="logo">
+              <img src={NuKenzieLog} alt="" />
+            </div>
             <img className="Log-title" src={logTitle} alt="" />
             <p className="Log-paragraph">de forma rápida e segura</p>
-            <button className="Login" onClick={Login}>Iniciar</button>
+            <button onClick={Login} className="Login" >Iniciar</button>
           </div>
           <div className="Log-img">
-            <img src={LoginPng} alt="" />
+            <img className="Log-block" src={LoginPng} alt="" />
           </div>
         </div>
       </>
@@ -65,20 +71,15 @@ function App() {
           <button className="logout-button" onClick={Logout}>Início</button>
         </header>
         <div className="App">
-          <Form addTransaction={addTransaction} R$={R$} />
-          <TotalMoney listTransactions={listTransactions} />
+          <section className="section">
+            <Form addTransaction={addTransaction} R$={R$} />
+            <TotalMoney listTransactions={listTransactions} />
+          </section>
           <main className="main-content">
-            <div className="header-list">
-              <h3 className="resume">Resumo Financeiro</h3>
-              <button className="button-all">Todos</button>
-              <button className="button-entry" onClick={() => setListTransactions(filterEntry)}>Entradas</button>
-              <button className="button-expense" onClick={() => setListTransactions(filterExpense)}>Despesas</button>
-            </div>
-            <List listTransactions={listTransactions} handleTransaction={handleTransaction} NoCard={Nocard} trash={trash} />
+            <List filter={filter} setFilter={setFilter} listTransactions={listTransactions} handleTransaction={handleTransaction} NoCard={Nocard} trash={trash} />
           </main>
         </div>
       </>
-
   );
 }
 

@@ -1,54 +1,19 @@
 .card {
     background: #F8F9FA;
     border-radius: 4px;
-    list-style: none;
-    border-radius: 4px;
-    width: 560px;
-    height: 87px;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: row;
+    width: 320px;
+    height: 87px;
+    margin-bottom: 20px;
     margin-left: -40px;
 }
 
-@media(max-width:768px) {
+@media(min-width:1024px) {
     .card {
         width: 560px;
-        height: 87px;
-        display: flex;
-        flex-direction: row;
-        margin-left: 150px;
-    }
-
-    .type {
-        left: -5%;
-    }
-
-    .value {
-        margin-left: -50px;
-    }
-}
-
-@media(max-width:425px) {
-    .card {
-        width: 300px;
-        height: 87px;
-        display: flex;
-        flex-direction: row;
-        margin-left: 0px;
-    }
-
-    .remove {
-        margin-left: -50px;
-    }
-}
-
-@media(max-width:375px) {
-    .card {
-        width: 300px;
-        height: 87px;
-        display: flex;
-        flex-direction: row;
-        margin-left: -20px;
     }
 }
 
@@ -68,58 +33,78 @@
     height: 87px;
 }
 
+.card-description {
+    width: 150px;
+    height: 87px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 14px;
+}
+
 .description {
-    position: relative;
-    left: 3.21%;
-    right: 36.61%;
-    bottom: 12%;
+    height: 39px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
     color: #212529;
+    margin-bottom: -10px;
+}
+
+@media(min-width:1024px) {
+    .description {
+        margin-top: 5px;
+    }
 }
 
 .type {
-    position: relative;
-    right: 5%;
-    top: 40%;
-    bottom: 12.64%;
+    color: #343A40;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 22px;
-    color: #343A40;
+}
+
+.card-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+@media(min-width:1024px) {
+    .card-value {
+        margin-left: 205px;
+        margin-top: -20px;
+    }
 }
 
 .value {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    left: 45%;
-    top: 5%;
-    bottom: 54.02%;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 22px;
     color: #212529;
-    width: 102px;
-    height: 22px;
+    margin-right: 30px;
+}
+
+@media(min-width:1024px) {
+    .value {
+        margin-right: 50px;
+        width: 102px;
+        height: 22px;
+    }
 }
 
 .remove {
     background: #E9ECEF;
     border-radius: 2.46154px;
-    border: 1px solid #E9ECEF;
-    position: relative;
-    top: 18%;
-    left: 58%;
-    width: 22px;
-    height: 22px;
+    border: none;
     cursor: pointer;
 }

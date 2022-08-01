@@ -19,19 +19,24 @@ function Form({ addTransaction, R$ }) {
             </div>
             <div className="form-footer">
                 <label className="label-value" htmlFor="input-number">Valor</label>
-                <input className="input-value" type="number" placeholder="1" value={valueInput}
+                <input className="input-value" type="number"
+                    placeholder="1" value={valueInput}
                     onChange={(event) => setValueInput(event.target.value)} />
                 <img className="reais" src={R$} />
-                <label className="label-selectValue" htmlFor="select">Tipo de valor</label>
-                <select className="select-value" value={selectInput} onChange={(event) => setSelectInput(event.target.value)} >
+                <label className="label-selectValue"
+                    htmlFor="select">Tipo de valor</label>
+                <select className="select-value"
+                    value={selectInput} onChange={(event) =>
+                        setSelectInput(event.target.value)} >
                     <option value="Entrada">Entrada</option>
                     <option value="Despesa">Despesa</option>
                 </select>
             </div>
-
             <button className="submit-form" type="submit" onClick={(event) => {
                 event.preventDefault();
                 addTransaction(valueInput, descriptionInput, selectInput);
+                setDescriptionInput("")
+                setValueInput("")
             }}>Inserir valor</button>
         </form>
     )

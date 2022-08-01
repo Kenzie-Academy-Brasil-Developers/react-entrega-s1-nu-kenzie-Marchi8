@@ -1,360 +1,166 @@
-.header {
-  width: 100vw;
-  height: 88px;
-  margin-bottom: 39px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 150px;
-  background: #F8F9FA;
-  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
-}
-
-.logout-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  gap: 10px;
-  width: 64px;
-  height: 40px;
-  background: #E9ECEF;
-  border: 1.4px solid #E9ECEF;
-  border-radius: 8px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  color: #343A40;
-  cursor: pointer;
-}
-
 .container {
-  background-color: #212529;
-  height: 100vh;
+  background: #212529;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  height: 100vh;
 }
 
-.App {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.main-content {
-  position: absolute;
-  width: 562px;
-  height: 459px;
-  left: 679px;
-  top: 122px;
-}
-
-@media(max-width:768px) {
-
-  .App-log {
-    width: 100vw;
-    position: unset;
-    width: 347px;
-    height: 274px;
-    left: 0px;
-  }
-
-  .Log-img {
-    display: none;
-  }
-
-  .App {
-    position: relative;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vw;
-  }
-
-  .main-content {
-    width: 390px;
-    height: 459px;
-    position: relative;
-    left: -100px;
-    top: 250px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header-list {
-    margin-left: -20px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 16px;
-  }
-
-  .resume {
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 30px;
-  }
-
-  .button-all {
-    margin-top: 20px;
-  }
-
-  .button-entry {
-    margin-top: 20px;
-  }
-
-  .button-expense {
-    margin-top: 20px;
-    margin-right: 60px;
-  }
-}
-
-@media(max-width:440px) {
-  .App-log {
-    position: unset;
-    width: 347px;
-    height: 274px;
-    margin-left: -200px;
-  }
-
+@media(min-width:1024px) {
   .container {
-    background-color: #212529;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
   }
-
-  .App {
-    position: relative;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vw;
-  }
-
-  .main-content {
-    width: 390px;
-    height: 459px;
-    position: relative;
-    left: -15px;
-    top: 430px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media(max-width:375px) {
-  .App {
-    left: -20px;
-  }
-
-  .main-content {
-    width: 390px;
-    height: 459px;
-    position: relative;
-    left: 20px;
-    top: 430px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .resume {
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-  }
-}
-
-@media(max-width:320px) {
-  .resume {
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-  }
-
-  .App {
-    position: relative;
-    left: -45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vw;
-  }
-
-  .main-content {
-    width: 390px;
-    height: 459px;
-    position: relative;
-    left: 40px;
-    top: 430px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.header-list {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 16px;
-}
-
-.resume {
-  white-space: nowrap;
-  position: absolute;
-  width: 140px;
-  height: 30px;
-  left: 0px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  color: #212529;
-}
-
-.button-all {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  gap: 10px;
-  width: 69px;
-  height: 40px;
-  background: #FD377E;
-  border: 1.4px solid #FD377E;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  color: #FFFFFF;
-  left: 100px;
-}
-
-.button-entry {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  gap: 10px;
-  width: 87px;
-  height: 40px;
-  background: #E9ECEF;
-  border: 1.4px solid #E9ECEF;
-  border-radius: 8px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  color: #343A40;
-  cursor: pointer;
-}
-
-.button-expense {
-  background-color: #FD377E;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  gap: 10px;
-  width: 92px;
-  height: 40px;
-  background: #E9ECEF;
-  border: 1.4px solid #E9ECEF;
-  border-radius: 8px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  color: #343A40;
-  cursor: pointer;
 }
 
 .App-log {
-  position: absolute;
-  width: 347px;
-  height: 274px;
-  left: 256px;
+  width: 100vw;
+  margin-top: 60px;
+  line-height: 48px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.Log-title {
-  margin-top: 30px;
+@media(min-width:1024px) {
+  .App-log {
+    width: 347px;
+    margin-right: 48px;
+  }
+}
+
+.logo {
+  width: 122.68px;
+  height: 19.53px;
+  margin-bottom: 20px;
+  margin-right: 180px;
 }
 
 .Log-paragraph {
+  width: 260px;
+  height: 26px;
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
-  margin-bottom: 28px;
-  margin-top: 28px;
+}
+
+@media(min-width:1024px) {
+  .Log-paragraph {
+    margin-left: -50px;
+  }
 }
 
 .Login {
-  background: #FD377E;
-  border: 2px solid #FD377E;
-  border-radius: 8px;
   width: 241px;
   height: 48px;
+  background: #FD377E;
+  color: #FFFFFF;
+  border: 2px solid #FD377E;
+  border-radius: 8px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
   cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media(min-width:1024px) {
+  .Login {
+    margin-left: -80px;
+  }
 }
 
 .Log-img {
-  position: absolute;
-  width: 593px;
-  height: 593px;
-  left: 651px;
-  top: 94px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Log-block {
+  width: 300px;
+}
+
+@media(min-width:1024px) {
+  .Log-img {
+    width: 593px;
+    height: 593px;
+  }
+
+  .Log-block {
+    width: 593px;
+    height: 593px;
+  }
+}
+
+.header {
+  background: #F8F9FA;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+@media(min-width:1024px) {
+  .header {
+    gap: 650px;
+  }
+}
+
+.logout-button {
+  background: #E9ECEF;
+  color: #343A40;
+  border: 1.4px solid #E9ECEF;
+  border-radius: 8px;
+  width: 64px;
+  height: 40px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media(min-width:1024px) {
+  .App {
+    flex-direction: row;
+  }
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media(min-width:1024px) {
+  .main-content {
+    width: 562px;
+    height: 459px;
+    justify-content: flex-start;
+    margin-left: 58px;
+  }
 }

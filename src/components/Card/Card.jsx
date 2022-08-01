@@ -2,7 +2,6 @@ import "./styles.css"
 
 
 function Card({ transactions, handleTransaction, index, trash }) {
-
     return (
         <li className="card" key={index}>
             {
@@ -11,11 +10,19 @@ function Card({ transactions, handleTransaction, index, trash }) {
                     :
                     <div className="expense">.</div>
             }
-            <h3 className="description">{transactions.description}</h3>
-            <p className="type">{transactions.type}</p>
-            <p className="value">R$ {transactions.value}</p>
-            <button className="remove"
-                onClick={() => handleTransaction(transactions)}> <img src={trash} alt="" /> </button>
+            <div className="card-description">
+                <h3 className="description">{transactions.description}</h3>
+                <p className="type">{transactions.type}</p>
+            </div>
+            <div className="card-value">
+                <p className="value">R$ {transactions.value}</p>
+                <button className="remove"
+                    onClick={() =>
+                        handleTransaction(transactions)}>
+                    <img src={trash} alt="" />
+                </button>
+            </div>
+
         </li>
     )
 }
